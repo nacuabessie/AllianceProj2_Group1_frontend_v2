@@ -3,10 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ManagementModule } from './management/management.module';
-import { MonthlyReportModule } from './monthly-report/monthly-report.module';
-import { TicketsModule } from './tickets/tickets.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
@@ -20,11 +16,11 @@ import { HotToastModule } from '@ngneat/hot-toast';
 import { ForgotComponent } from './forgetpass/forgetpass.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     LoginComponent,
     ForgotComponent,
     //LoginPageComponent,
@@ -38,9 +34,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     //LoginModule,
     BrowserModule,
     AppRoutingModule,
-    TicketsModule,
-    ManagementModule,
-    MonthlyReportModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -50,6 +43,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatInputModule,
     HotToastModule.forRoot(),
     BrowserAnimationsModule,
+    DashboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

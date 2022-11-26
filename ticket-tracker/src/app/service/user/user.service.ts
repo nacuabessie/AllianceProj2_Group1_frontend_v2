@@ -10,18 +10,26 @@ import { Users } from './user';
 export class UsersService {
   users: Users[]=[];
   constructor(private http: HttpClient) { }
-
   
 getAllUsers(){
   return this.http.get("http://localhost:8080/user/all").pipe(map(
     resp=>resp));
 }
+
 saveUser(user: Users){
   return this.http.post("http://localhost:8080/user/create",user).pipe(map(resp=>resp));
 }
+
 getUserByEmail(user_email: string){
   return this.http.get(`http://localhost:8080/user/${user_email}`)
   .pipe(map(resp=>resp));
+}
+
+postTicket(ticket:any){
+  return this.http.post("http://localhost:8080/ticket/create",this.users).pipe(map(resp=>resp));
+}
+addTicket(){
+  return this.http.post("http://localhost:8080/ticket/create",this.users).pipe(map(resp=>resp));
 }
 
 }
