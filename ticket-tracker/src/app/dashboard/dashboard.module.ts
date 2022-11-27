@@ -8,6 +8,8 @@ import { TicketPageComponent } from './ticket-page/ticket-page.component';
 import { ManagementPageComponent } from './management-page/management-page.component';
 import { MonthlyReportPageComponent } from './monthly-report-page/monthly-report-page.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { MonthlyReportPageComponent } from './monthly-report-page/monthly-report
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class DashboardModule { }
